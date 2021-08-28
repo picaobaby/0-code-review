@@ -1,0 +1,226 @@
+.item {
+  display: flex;
+  justify-content: space-around;
+}
+.flex {
+  display: flex;
+}
+.bg-green {
+  background-color: lightgreen;
+}
+.bg-grey {
+  background-color: grey;
+}
+.bg-lightblue {
+  background-color: lightblue;
+}
+.bg-lightgrey {
+  background-color: lightgrey;
+}
+.bg-red {
+  background-color: red;
+}
+
+.column {
+  border: "1px solid #333";
+  margin-right: 10px;
+  padding: 8px;
+  width: 250px;
+}
+.item-style {
+  user-select: none;
+  padding: 16px;
+  margin: 0 0 8px 0;
+  border: 1px solid red;
+}
+
+/* my new styles */
+.group-container {
+  border: 1px solid red;
+  margin-bottom: 20px;
+  width: 250px;
+}
+.item-container {
+  padding: 4px 0;
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --------- starting here --------- */
+/* Import */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/oswald/v36/TK3_WkUHHAIjg75cFRf3bXL8LICs169vsUZiYA.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/oswald/v36/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/oswald/v36/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZosUZiYA.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdr.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf)
+    format("truetype");
+}
+/* Variables */
+/* Base */
+body {
+  background: #252827;
+  font-size: 16px;
+}
+.timeline-dark h1 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1.5px;
+  color: white;
+  font-weight: 100;
+  font-size: 2.4em;
+}
+.timeline-dark {
+  margin-top: 50px;
+  text-align: center;
+}
+/* Timeline */
+.timeline-dark .timeline {
+  border-left: 4px solid #4298c3;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 50px auto;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  padding: 50px;
+  list-style: none;
+  text-align: left;
+  font-weight: 100;
+  max-width: 60%;
+  /*   margin-left: 160px; */
+}
+.timeline-dark .timeline h1,
+.timeline-dark .timeline h3 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  font-size: 1.4em;
+}
+.timeline-dark .timeline .event {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.timeline-dark .timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+.timeline-dark .timeline .event:before,
+.timeline-dark .timeline .event:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+.timeline-dark .timeline .event:before {
+  left: -185px;
+  color: rgba(255, 255, 255, 1);
+  content: attr(data-date);
+  text-align: right;
+  font-weight: 300;
+  font-size: 1.2em;
+  /* min-width: 120px; */
+}
+.timeline-dark .timeline .event:after {
+  box-shadow: 0 0 0 4px #4298c3;
+  left: -57.85px;
+  background: #313534;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  content: "";
+  top: 5px;
+}
+
+/* my own */
+.workout_thumb {
+  border: 1px solid #fff;
+  border-radius: 100%;
+  padding: 2px;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  object-fit: cover;
+}
+
+/* --------- dragging position issue, solution -------- */
+.droppable-area {
+  top: auto !important; /* needed this */
+  left: auto !important; /* needed this*/
+  min-height: 100px;
+
+  display: flex;
+  /*   flex-wrap: wrap; */
+  /*   flex-direction: column; */
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline-dark .timeline {
+    padding: 10px;
+    margin-right: 10px;
+    max-width: inherit;
+  }
+
+  .timeline-dark .workout_thumb {
+    width: 50px;
+  }
+}
